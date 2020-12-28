@@ -5,8 +5,11 @@ import io.reactivex.Observable;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.InputStream;
+import java.net.URL;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.ResourceBundle;
 import java.util.concurrent.TimeUnit;
 
 public class Game extends JPanel {
@@ -77,7 +80,7 @@ public class Game extends JPanel {
     public List<Image> getImgList(String color) {
         List<Image> animation = new ArrayList<>();
         for (int i = 1; i <= 6; i++) {
-            animation.add(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Michael\\Desktop\\sprites\\Dinos\\"+color+"\\walk" + i + ".png"));
+            animation.add(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Michael\\Documents\\GitHub\\Paint-o-saurs\\Att1\\src\\main\\resources\\Dinos\\"+ color +"\\walk"+ i +".png"));
         }
         return animation;
     }
@@ -85,7 +88,7 @@ public class Game extends JPanel {
     public List<Image> getDeadImgList(String color) {
         List<Image> animation = new ArrayList<>();
         for (int i = 1; i <= 2; i++) {
-            animation.add(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Michael\\Desktop\\sprites\\Dinos\\"+color+"\\dead" + i + ".png"));
+            animation.add(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Michael\\Documents\\GitHub\\Paint-o-saurs\\Att1\\src\\main\\resources\\Dinos\\"+ color +"\\dead"+ i +".png"));
         }
         return animation;
     }

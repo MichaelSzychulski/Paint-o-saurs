@@ -25,7 +25,7 @@ public class Trail {
             List<PaintStain> list = new ArrayList<>(stains);
            Observable.fromIterable(list)
                    .filter(s -> (s.getOwner() != dino))
-                   .any(s -> s.getEllipse().intersects(dino.getDinoX(), dino.getDinoY() + (dino.getDinoSize()/2), dino.getDinoSize(), dino.getDinoSize()/2))
+                   .any(s -> s.getEllipse().intersects(dino.getDinoX() + dino.getDinoSize()/3, dino.getDinoY() + (dino.getDinoSize()/2), dino.getDinoSize()/2, dino.getDinoSize()/2))
                    .filter(b -> b)
                    .subscribe(s -> {
                        dino.setDead(true);
